@@ -1059,4 +1059,32 @@ html {
     }
 }
 
+/* =================================
+   KHOVA SOCIAL MEDIA LINKS
+================================= */
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-socials h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.footer-socials a {
+    color: #b8c4d6;
+    text-decoration: none;
+    transition: 0.3s ease;
+    width: fit-content;
+}
+
+.footer-socials a:hover {
+    color: #00aaff;
+    transform: translateX(5px);
+}
+
+
 
