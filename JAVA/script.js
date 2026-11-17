@@ -119,26 +119,69 @@ if (menuToggle && navLinks) {
 // KHOVA CONTACT FORM FEEDBACK
 // ==========================================
 
+
+// ==========================================
+// KHOVA CONTACT FORM - WEB3FORMS
+// ==========================================
+
 const contactForm = document.getElementById("contact-form");
 const formStatus = document.getElementById("form-status");
 
 if (contactForm && formStatus) {
-
-    contactForm.addEventListener("submit", () => {
+    contactForm.addEventListener("submit", async function(event) {
+        event.preventDefault();
 
         const submitButton = contactForm.querySelector(
             'button[type="submit"]'
         );
 
-        if (submitButton) {
-            submitButton.textContent = "Sending Enquiry...";
-            submitButton.disabled = true;
+        const originalText = submitButton.textContent;
+
+        submitButton.textContent = "Sending Enquiry...";
+        submitButton.disabled = true;
+        formStatus.textContent = "Please wait while we send your enquiry.";
+
+        try {
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            const response = await fetch(
+                "https://api.web3forms.com/submit",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json"
+                    },
+                    body: JSON.stringify(data)
+                }
+            );
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                formStatus.textContent =
+                    "Thank you! Your enquiry has been sent successfully.";
+
+                contactForm.reset();
+            } else {
+                formStatus.textContent =
+                    result.message || "Something went wrong. Please try again.";
+            }
+
+        } catch (error) {
+            console.error("Contact form error:", error);
+
+            formStatus.textContent =
+                "Unable to send your enquiry. Please check your connection and try again.";
+
+        } finally {
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
         }
-
-        formStatus.textContent = "Your enquiry is being submitted.";
     });
-
 }
+
 
 
 // ==========================================

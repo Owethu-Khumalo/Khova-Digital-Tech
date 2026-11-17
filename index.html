@@ -273,45 +273,48 @@
             <p><strong>WhatsApp:</strong> +27 76 117 0348</p>
         </div>
 
-        <form class="contact-form" id="contact-form"
-              action="https://formsubmit.co/owekhumalo3456@gmail.com"
-              method="POST">
+        <form class="contact-form" id="contact-form">
 
-            <input type="hidden" name="_subject"
-                   value="New KHOVA Website Enquiry">
+    <input type="hidden" name="access_key"
+           value="7c34446c-0658-4e35-b0af-c6e7bb1edf63">
 
-            <input type="hidden" name="_template"
-                   value="table">
+    <input type="hidden" name="subject"
+           value="New KHOVA Website Enquiry">
 
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name"
-                   placeholder="Enter your name" required>
+    <!-- Spam protection -->
+    <input type="checkbox" name="botcheck"
+           style="display: none;">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email"
-                   placeholder="Enter your email" required>
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name"
+           placeholder="Enter your name" required>
 
-            <label for="service">What do you need?</label>
-            <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="Website Development">Website Development</option>
-                <option value="Mobile App Development">Mobile App Development</option>
-                <option value="UI/UX Design">UI/UX Design</option>
-                <option value="Other">Something Else</option>
-            </select>
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email"
+           placeholder="Enter your email" required>
 
-            <label for="message">Tell us about your project</label>
-            <textarea id="message" name="message"
-                      rows="5"
-                      placeholder="Describe your idea or project..."
-                      required></textarea>
+    <label for="service">What do you need?</label>
+    <select id="service" name="service" required>
+        <option value="">Select a service</option>
+        <option value="Website Development">Website Development</option>
+        <option value="Mobile App Development">Mobile App Development</option>
+        <option value="UI/UX Design">UI/UX Design</option>
+        <option value="Other">Something Else</option>
+    </select>
 
-            <button type="submit" class="primary-button">
-                Send Enquiry →
-            </button>
-            <p id="form-status" role="status" aria-live="polite"></p>
+    <label for="message">Tell us about your project</label>
+    <textarea id="message" name="message"
+              rows="5"
+              placeholder="Describe your idea or project..."
+              required></textarea>
 
-        </form>
+    <button type="submit" class="primary-button">
+        Send Enquiry →
+    </button>
+
+    <p id="form-status" role="status" aria-live="polite"></p>
+
+</form>
 
     </div>
 </section>
