@@ -281,20 +281,21 @@ document.addEventListener("DOMContentLoaded", () => {
             button: "View Project →"
         },
 
-        breeze: {
-            title: "Breeze Café",
-            description: "A modern café website concept designed to provide customers with business information, explore the menu and submit reservation enquiries.",
-            features: [
-                "Digital café menu",
-                "Reservation enquiry form",
-                "Contact information",
-                "About the café section",
-                "Responsive website design"
-            ],
-            technology: "HTML | CSS | JavaScript",
-            link: "https://owethu-khumalo.github.io/owethu-khumalo/",
-            button: "Visit Website →"
-        },
+        
+elitefitness: {
+    title: "ELITE FITNESS",
+    description: "A modern fitness website concept designed to showcase gym programs, membership options and fitness services through a bold and responsive digital experience.",
+    features: [
+        "Modern fitness website design",
+        "Training program information",
+        "Membership packages",
+        "Responsive website layout",
+        "Interactive navigation and animations"
+    ],
+    technology: "HTML | CSS | JavaScript",
+    link: "https://owethu-khumalo.github.io/Gym-Website/",
+    button: "Visit Website →"
+},
 
 
 nextlevel: {
