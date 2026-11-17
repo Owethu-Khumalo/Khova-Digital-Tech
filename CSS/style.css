@@ -1059,32 +1059,56 @@ html {
     }
 }
 
+
 /* =================================
-   KHOVA SOCIAL MEDIA LINKS
+   KHOVA SOCIAL MEDIA ICONS
 ================================= */
 
 .footer-socials {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 18px;
 }
 
 .footer-socials h3 {
     color: #ffffff;
-    margin-bottom: 8px;
+    margin: 0;
 }
 
-.footer-socials a {
-    color: #b8c4d6;
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    font-size: 21px;
     text-decoration: none;
-    transition: 0.3s ease;
-    width: fit-content;
+
+    border: 1px solid rgba(0, 170, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(0, 170, 255, 0.06);
+
+    transition: all 0.3s ease;
 }
 
-.footer-socials a:hover {
+.social-icons a:hover {
     color: #00aaff;
-    transform: translateX(5px);
+    border-color: #00aaff;
+    background: rgba(0, 170, 255, 0.15);
+
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px rgba(0, 170, 255, 0.25);
 }
+
 
 
 
