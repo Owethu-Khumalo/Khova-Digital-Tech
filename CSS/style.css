@@ -1108,38 +1108,7 @@ html {
     transform: translateY(-5px);
     box-shadow: 0 0 18px rgba(0, 170, 255, 0.25);
 }
-/* KHOVA Brand Logo */
-.brand-logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
 
-.brand-logo img {
-    height: 48px;
-    width: auto;
-    max-width: 190px;
-    object-fit: contain;
-    display: block;
-}
-
-.brand-logo:hover {
-    transform: scale(1.04);
-    opacity: 0.85;
-}
-
-/* Footer Logo */
-.footer-brand .brand-logo img {
-    height: 55px;
-}
-
-/* Mobile Logo */
-@media (max-width: 768px) {
-    .brand-logo img {
-        height: 40px;
-    }
-}
 
 
 
